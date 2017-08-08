@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Neural Net for Handwritten Digit Recognition in JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="jquery.min.js"></script>
+  </head>
+  <body style="padding:5px;">
+  
+    <div class="container bs-docs-container">
+      <div id="dbgOutput">
+      </div>
+      <h1>Using a pre-trained neural network for digit recognition</h1>
+      <div class="container">
+        <div><p>Draw a digit in the box below and click the "recognize" button.</p></div>
+        <div class="container" style="float:left;">
+          <div>
+            <canvas id="can" width="280" height="280" style="top:10%;left:10%;border:2px solid;"></canvas>
+          </div>
+          <div class="container">
+            <div style="float:left;padding-right:10px;"><input type="button" value="clear" id="clr" size="23" onclick="erase()"></div>
+            <div style="float:left;"><input type="button" value="recognize" id="recognize" size="23" onclick="recognize()"></div>
+            <div id="nnInput"></div>
+          </div>
+        </div>
+        <div style="float:left;font-size:200px;margin-left:80px;" id="nnOut"></div>
+      </div>
+      
+      <div style="margin-bottom:10px;"></div>
+      <script type="text/javascript" src="/js/flot/jquery.flot.js"></script>
+      <script type="text/javascript" src="data.js"></script>
+       <script type="text/javascript" src="neural_net.js"></script>
+      </div>
+  </body>
+</html>
